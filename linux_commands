@@ -1,0 +1,3 @@
+print only uncommented lines:
+*****************************
+grep -v -e "^#" -e "^$" filename
