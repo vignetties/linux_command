@@ -1,3 +1,8 @@
 print only uncommented lines:
 *****************************
 grep -v -e "^#" -e "^$" filename
+
+
+to enable nfs in firewall enable below ports :
+
+2049/tcp 111/tcp 2049/udp 111/udp 892/tcp 32769/tcp 32803/tcp 662/tcp
