@@ -10,3 +10,24 @@ to enable nfs in firewall enable below ports :
 
 
 https://docs.google.com/spreadsheets/d/11Ct1OZWnRS3W4XL_DHqM0LgMtMXYt5BESV5wdsVWVAg/edit?usp=sharing
+
+
+sla29322:/root # systemctl list-unit-files| grep allianz
+absazp-allianz-grafana.service                enabled
+absazp-allianz-mesh.service                   enabled
+allianz-aoms-intermediary.service             enabled
+sla29322:/root # chkconfig --list|grep allianz
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+allianz-elasticsearch   0:off   1:off   2:off   3:off   4:off   5:off   6:off
+allianz-elasticsearch-clusternode-config        0:off   1:off   2:on    3:on    4:on    5:on    6:off
+allianz-elasticsearch-coordinator-config        0:off   1:off   2:on    3:on    4:on    5:on    6:off
+allianz-kibana  0:off   1:off   2:on    3:on    4:on    5:on    6:off
+allianz-logstash        0:off   1:off   2:on    3:on    4:on    5:on    6:off
+allianz-logstash-listener-config        0:off   1:off   2:off   3:off   4:off   5:off   6:off
+allianz-logstash-poller-config  0:off   1:off   2:on    3:on    4:on    5:on    6:off
+sla29322:/root #
